@@ -1,0 +1,12 @@
+{
+  "name": "Approvals",
+  "description": null,
+  "type": "Stored",
+  "handlers": [],
+  "policyRules": [],
+  "trees": [
+    "routine_approval",
+    "routine_task",
+    "routine_validate_assignment"
+  ]
+}

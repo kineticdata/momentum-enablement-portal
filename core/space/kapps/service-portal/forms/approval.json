@@ -1,0 +1,660 @@
+{
+  "anonymous": false,
+  "attributes": [
+    {
+      "name": "Icon",
+      "values": [
+        "circle-dashed-check"
+      ]
+    },
+    {
+      "name": "Notification Template Name - Create",
+      "values": [
+        "Approval Created"
+      ]
+    },
+    {
+      "name": "Owning Team",
+      "values": [
+        "Default"
+      ]
+    }
+  ],
+  "bridgedResources": [],
+  "categorizations": [],
+  "customHeadContent": "",
+  "description": "Submissions for this form are automatically created as part of workflow.",
+  "indexDefinitions": [
+    {
+      "name": "closedBy",
+      "parts": [
+        "closedBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "createdBy",
+      "parts": [
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "handle",
+      "parts": [
+        "handle"
+      ],
+      "unique": false
+    },
+    {
+      "name": "submittedBy",
+      "parts": [
+        "submittedBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "updatedBy",
+      "parts": [
+        "updatedBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual Display Name]",
+      "parts": [
+        "values[Assigned Individual Display Name]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual]",
+      "parts": [
+        "values[Assigned Individual]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],createdBy",
+      "parts": [
+        "values[Assigned Individual]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],values[Assigned Team]",
+      "parts": [
+        "values[Assigned Individual]",
+        "values[Assigned Team]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],values[Assigned Team],createdBy",
+      "parts": [
+        "values[Assigned Individual]",
+        "values[Assigned Team]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],values[Assigned Team],values[Status]",
+      "parts": [
+        "values[Assigned Individual]",
+        "values[Assigned Team]",
+        "values[Status]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],values[Assigned Team],values[Status],createdBy",
+      "parts": [
+        "values[Assigned Individual]",
+        "values[Assigned Team]",
+        "values[Status]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],values[Status]",
+      "parts": [
+        "values[Assigned Individual]",
+        "values[Status]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Individual],values[Status],createdBy",
+      "parts": [
+        "values[Assigned Individual]",
+        "values[Status]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Team Display Name]",
+      "parts": [
+        "values[Assigned Team Display Name]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Team]",
+      "parts": [
+        "values[Assigned Team]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Team],createdBy",
+      "parts": [
+        "values[Assigned Team]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Team],values[Status]",
+      "parts": [
+        "values[Assigned Team]",
+        "values[Status]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Assigned Team],values[Status],createdBy",
+      "parts": [
+        "values[Assigned Team]",
+        "values[Status]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Decision]",
+      "parts": [
+        "values[Decision]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Deferral Token]",
+      "parts": [
+        "values[Deferral Token]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Details]",
+      "parts": [
+        "values[Details]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Due Date]",
+      "parts": [
+        "values[Due Date]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Notes for Customer]",
+      "parts": [
+        "values[Notes for Customer]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Reason]",
+      "parts": [
+        "values[Reason]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Status]",
+      "parts": [
+        "values[Status]"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Status],createdBy",
+      "parts": [
+        "values[Status]",
+        "createdBy"
+      ],
+      "unique": false
+    },
+    {
+      "name": "values[Summary]",
+      "parts": [
+        "values[Summary]"
+      ],
+      "unique": false
+    }
+  ],
+  "integrations": [],
+  "name": "Approval",
+  "notes": null,
+  "pages": [
+    {
+      "advanceCondition": "values('Status') === 'Complete' || values('Status') === 'Cancelled'",
+      "displayCondition": null,
+      "displayPage": null,
+      "elements": [
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Summary Review Section",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {},
+          "elements": [
+            {
+              "type": "content",
+              "renderType": "html",
+              "name": "Summary Review HTML",
+              "text": "",
+              "visible": true,
+              "renderAttributes": {}
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Form",
+          "title": null,
+          "visible": true,
+          "omitWhenHidden": null,
+          "renderAttributes": {},
+          "elements": [
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": "A decision must be provided",
+              "name": "Decision",
+              "choicesResourceName": null,
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "radio",
+              "pattern": null,
+              "defaultValue": "",
+              "visible": true,
+              "choices": [
+                {
+                  "label": "Approved",
+                  "value": "Approved"
+                },
+                {
+                  "label": "Denied",
+                  "value": "Denied"
+                },
+                {
+                  "label": "Pending",
+                  "value": "Pending"
+                }
+              ],
+              "label": "Decision",
+              "choicesRunIf": null,
+              "constraints": [],
+              "choicesDataSource": "custom",
+              "events": [
+                {
+                  "name": "Set Status Pending",
+                  "type": "Change",
+                  "action": "Set Fields",
+                  "mappings": [
+                    {
+                      "field": "Status",
+                      "value": "Pending",
+                      "visible": null
+                    }
+                  ],
+                  "runIf": "values('Decision') === 'Pending'"
+                },
+                {
+                  "name": "Set Status Cancelled",
+                  "type": "Change",
+                  "action": "Set Fields",
+                  "mappings": [
+                    {
+                      "field": "Status",
+                      "value": "Cancelled",
+                      "visible": null
+                    }
+                  ],
+                  "runIf": "values('Decision') === 'Denied'"
+                },
+                {
+                  "name": "Set Status Complete",
+                  "type": "Change",
+                  "action": "Set Fields",
+                  "mappings": [
+                    {
+                      "field": "Status",
+                      "value": "Complete",
+                      "visible": null
+                    }
+                  ],
+                  "runIf": "values('Decision') === 'Approved'"
+                }
+              ],
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f7",
+              "required": "values('Status') === 'Complete' || values('Status') === 'Cancelled'"
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": "Please enter a reason for denying the approval",
+              "name": "Reason",
+              "omitWhenHidden": true,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": "values('Decision') === \"Denied\"",
+              "label": "Reason",
+              "constraints": [],
+              "events": [],
+              "rows": 1,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f8",
+              "required": "values('Decision') === \"Denied\""
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": null,
+              "name": "Notes for Customer",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Notes (sent to requester upon completion)",
+              "constraints": [],
+              "events": [],
+              "rows": 3,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f9",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "renderType": null,
+          "name": "Hidden Metadata",
+          "title": "",
+          "visible": false,
+          "omitWhenHidden": false,
+          "renderAttributes": {},
+          "elements": [
+            {
+              "type": "section",
+              "renderType": null,
+              "name": "Summary Review Data",
+              "title": null,
+              "visible": true,
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "elements": [
+                {
+                  "enabled": true,
+                  "dataType": "string",
+                  "defaultDataSource": "none",
+                  "requiredMessage": null,
+                  "name": "Summary",
+                  "omitWhenHidden": null,
+                  "renderAttributes": {},
+                  "renderType": "text",
+                  "pattern": null,
+                  "defaultValue": null,
+                  "visible": true,
+                  "label": "Summary",
+                  "constraints": [],
+                  "events": [],
+                  "rows": 1,
+                  "defaultResourceName": null,
+                  "type": "field",
+                  "key": "f2",
+                  "required": false
+                },
+                {
+                  "enabled": true,
+                  "dataType": "string",
+                  "defaultDataSource": "none",
+                  "requiredMessage": null,
+                  "name": "Details",
+                  "omitWhenHidden": null,
+                  "renderAttributes": {},
+                  "renderType": "text",
+                  "pattern": null,
+                  "defaultValue": null,
+                  "visible": true,
+                  "label": "Details",
+                  "constraints": [],
+                  "events": [],
+                  "rows": 2,
+                  "defaultResourceName": null,
+                  "type": "field",
+                  "key": "f1",
+                  "required": false
+                }
+              ]
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": null,
+              "name": "Assigned Individual",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Assigned Individual",
+              "constraints": [],
+              "events": [],
+              "rows": 1,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f912",
+              "required": false
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": null,
+              "name": "Assigned Individual Display Name",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Assigned Individual Display Name",
+              "constraints": [],
+              "events": [],
+              "rows": 1,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f913",
+              "required": false
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": "",
+              "name": "Assigned Team",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Assigned Team",
+              "constraints": [],
+              "events": [],
+              "rows": 1,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f910",
+              "required": "values('Assigned Individual') === null || values('Assigned Individual') === \"\""
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": null,
+              "name": "Assigned Team Display Name",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Assigned Team Display Name",
+              "constraints": [],
+              "events": [],
+              "rows": 1,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f911",
+              "required": false
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": null,
+              "name": "Deferral Token",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "text",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Deferral Token",
+              "constraints": [],
+              "events": [],
+              "rows": 1,
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f914",
+              "required": false
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": "A valid status must be set.",
+              "name": "Status",
+              "choicesResourceName": null,
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "dropdown",
+              "pattern": null,
+              "defaultValue": "Open",
+              "visible": true,
+              "choices": [
+                {
+                  "label": "Open",
+                  "value": "Open"
+                },
+                {
+                  "label": "Pending",
+                  "value": "Pending"
+                },
+                {
+                  "label": "Cancelled",
+                  "value": "Cancelled"
+                },
+                {
+                  "label": "Complete",
+                  "value": "Complete"
+                }
+              ],
+              "label": "Status",
+              "choicesRunIf": null,
+              "constraints": [],
+              "choicesDataSource": "custom",
+              "events": [],
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f901",
+              "required": true
+            },
+            {
+              "enabled": true,
+              "dataType": "string",
+              "defaultDataSource": "none",
+              "requiredMessage": null,
+              "name": "Due Date",
+              "omitWhenHidden": null,
+              "renderAttributes": {},
+              "renderType": "datetime",
+              "pattern": null,
+              "defaultValue": null,
+              "visible": true,
+              "label": "Due Date",
+              "constraints": [],
+              "events": [],
+              "defaultResourceName": null,
+              "type": "field",
+              "key": "f920",
+              "required": false
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "renderType": "submit-page",
+          "name": "Submit",
+          "label": "Submit",
+          "visible": true,
+          "enabled": true,
+          "renderAttributes": {}
+        }
+      ],
+      "events": [
+        {
+          "name": "Load Summary Review",
+          "code": "// Loads Data from the 'Summary Review Data' Section into the 'Summary Review HTML' for display to the user.\n// Use descriptive variable names and proper declarations\nconst displaySection = K('section[Summary Review Data]').element();\nconst reviewTarget = K('content[Summary Review HTML]').element();\n\n// Early exit if elements don't exist\nif (!displaySection || !reviewTarget) {\n  console.error('Required elements not found');\n  return;\n}\n\n// Get field names from labels\nconst labels = displaySection.querySelectorAll('label.field-label');\nconst fieldNames = Array.from(labels)\n  .map(label => {\n    const forAttr = label.getAttribute('for');\n    const input = forAttr ? document.getElementById(forAttr) : null;\n    return input?.getAttribute('name');\n  })\n  .filter(name => name);\n\n// Create outer container for non-Summary fields\nconst outerContainer = document.createElement('div');\nouterContainer.className = 'bg-base-200 rounded-box px-2 py-1.5 md:py-3';\n\n// Create dl element - changed to single column\nconst dl = document.createElement('dl');\ndl.className = 'max-md:text-xs flex flex-col gap-3';\ndl.style.overflowWrap = 'anywhere';\n\n// Build review content\nfieldNames.forEach(fieldName => {\n  const field = K(`field[${fieldName}]`);\n  const value = field.value();\n  const label = field.label();\n  \n  if (!value) return;\n  \n  // Check if this is the Summary field\n  const isSummary = label === 'Summary';\n  \n  if (isSummary) {\n    // Append Summary directly to reviewTarget as first child\n    const summaryDiv = document.createElement('div');\n    summaryDiv.className = 'text-lg md:text-xl font-semibold';\n    \n    // Add value with line breaks\n    const lines = value.split('\\n');\n    lines.forEach((line, index) => {\n      summaryDiv.appendChild(document.createTextNode(line));\n      if (index < lines.length - 1) {\n        summaryDiv.appendChild(document.createElement('br'));\n      }\n    });\n    \n    reviewTarget.appendChild(summaryDiv);\n  } else {\n    // Create field container div for non-Summary fields\n    const fieldDiv = document.createElement('div');\n    fieldDiv.className = 'flex flex-col gap-0.5 md:gap-1';\n    \n    const dt = document.createElement('dt');\n    dt.className = 'text-base-content/60 font-medium';\n    dt.textContent = label;\n    fieldDiv.appendChild(dt);\n    \n    // Create dd (value) element\n    const dd = document.createElement('dd');\n    \n    // Add value with line breaks\n    const lines = value.split('\\n');\n    lines.forEach((line, index) => {\n      dd.appendChild(document.createTextNode(line));\n      if (index < lines.length - 1) {\n        dd.appendChild(document.createElement('br'));\n      }\n    });\n    \n    fieldDiv.appendChild(dd);\n    dl.appendChild(fieldDiv);\n  }\n});\n\n// Only append outer container if there's data in dl\nif (dl.children.length > 0) {\n  outerContainer.appendChild(dl);\n  reviewTarget.appendChild(outerContainer);\n}",
+          "integrationResourceName": null,
+          "action": "Custom",
+          "integrationResourceProperty": "",
+          "type": "Load"
+        }
+      ],
+      "name": "Page One",
+      "renderType": "submittable",
+      "type": "page"
+    }
+  ],
+  "securityPolicies": [],
+  "slug": "approval",
+  "status": "Active",
+  "submissionLabelExpression": "${values('Summary')}",
+  "type": "Approval"
+}
